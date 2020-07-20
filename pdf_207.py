@@ -80,7 +80,9 @@ y = ((1 / (np.sqrt(2 * np.pi) * std_of_array)) *
 ax.plot(bins, y, '--')
 ax.set_xlabel('delta_T')
 ax.set_ylabel('Probability density of packets')
-ax.set_title(r'Histogram of GOOSE data207: $\mu=1.244$, $\sigma=1.392$')
+#ax.set_title(r'Histogram of GOOSE data207:  $/mu=delta_average_of_array$, $\sigma=std_of_array$')
+title = ' Histogram of dataset207_1: μ' + '=' + str(delta_average_of_array), ' σ = ' + str(std_of_array)
+ax.set_title (title)
 
 # Tweak spacing to prevent clipping of ylabel
 fig.tight_layout()
@@ -95,7 +97,9 @@ y = ((1 / (np.sqrt(2 * np.pi) * std_of_array)) *
 ax.plot(bins, y, '--')
 ax.set_xlabel('delta_T')
 ax.set_ylabel('Probability density of packets')
-ax.set_title(r'Histogram of GOOSE data207: $\mu=1.244$, $\sigma=1.392$')
+#ax.set_title(r'Histogram of GOOSE data207: ' '$\mu' %(delta_average_of_array), '$\sigma ' %(%std_of_array))
+title = 'Histogram of standardised Dataset: μ' + '=' + str(delta_average_of_array), ' σ = ' + str(std_of_array)
+ax.set_title(title)
 
 # Tweak spacing to prevent clipping of ylabel
 fig.tight_layout()
